@@ -1,0 +1,114 @@
+/* Nav
+--------------------------------------------------------------*/
+
+.navBtn div{
+    width: 23px;
+    height: 4px;
+    border-radius: 100px;
+    margin: 4px;
+    background-color: rgb(255, 255, 255);
+    transition: all 800ms ease-out;
+}
+
+
+.navBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    opacity: 0.8;
+}
+
+.navBtn.close .line{
+    transform: rotate(180deg);
+    transition: all 400ms ease-out;
+}
+
+.navBtn.close .line:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.navBtn.close .line:nth-child(2){
+    opacity: 0;
+}
+.navBtn.close .line:nth-child(3){
+    transform: rotate(-45deg) translate(6.5px, -6px);
+}
+
+@media (max-width: 430px) {
+  
+    .navBtn {
+      top: 10px;
+    }
+  }
+
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    visibility: hidden;
+    background: rgb(48, 48, 48, .9);
+    height: 100vh;
+    padding: 50px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    border-left: 1px solid #272727;
+    transform: translate3d(100%, 0, 0);
+    transition: all 600ms ease-out;
+}
+
+.menu.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-nav{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 230px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu-nav a{
+    display: block;
+    padding: 10px 0 10px 0;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    transition: .3s;
+    text-transform: uppercase;
+    width:150px;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 3px;
+    font-family: 'El Messiri', sans-serif;
+
+}
+
+.menu-nav a:hover{
+   color: #9e2d2e;
+   font-size: 28px;
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        width: 40%;
+    }
+}
+@media (max-width: 992px) {
+    .menu {
+        width: 50%;
+    }
+}
+@media (max-width: 500px) {
+    .menu {
+        width: 100%;
+    }
+}
